@@ -64,6 +64,8 @@ links
 jq
 zstd
 neofetch
+ffmpeg
+exiftool
 
 # themes
 arc-theme
