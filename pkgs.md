@@ -43,6 +43,7 @@ wf-recorder
 slurp
 grim
 wlr-randr
+Thunar
 
 # progs
 firefox
@@ -66,6 +67,8 @@ zstd
 neofetch
 ffmpeg
 exiftool
+yt-dlp
+ImageMagick
 
 # themes
 arc-theme
