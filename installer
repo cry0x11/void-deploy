@@ -1,0 +1,40 @@
+#!/bin/bash
+
+function service () {
+    ln -s /etc/sv/$1 /etc/runit/runsvdir/default/
+}
+
+username="user"
+
+echo root:password | chpasswd
+useradd $username
+echo $username:password | chpasswd
+
+
+echo "mini" > /etc/hostname
+echo "TIMEZONE=\"Africa/Cairo\"" >> /etc/rc.conf
+echo "HARDWARECLOCK=UTC" >> /etc/rc.conf
+echo "FONT=\"lat9w-16\"" >> /etc/rc.conf
+echo "en_US.UTF-8 UTF-8" >> /etc/rc.conf
+echo "en_US ISO-8859-1" >> /etc/rc.conf
+cp hosts /etc/
+
+xbps-reconfigure -f glibc-locales
+
+cp /proc/mounts /etc/fstab
+
+service cronie
+service dhcpcd
+service wpa_supplicant
+service seatd
+service keyd
+service elogind
+service dbus
+service greetd
+
+usermod -aG input,video,audio,keyd,_seatd user
+
+xbps-install grub-x86_64-efi
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id="Void"
+
+xbps-reconfigure -fa

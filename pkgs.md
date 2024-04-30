@@ -1,0 +1,117 @@
+# system
+opendoas
+cronie
+dbus-elogind
+elogind
+xdg-user-dirs
+xdg-user-dirs-gtk
+tuigreet
+greetd
+seatd
+neovim
+mesa
+mesa-dri
+mtools
+dosfstools
+ntfs-3g
+keyd
+intel-video-accel
+gvfs
+gvfs-mtp
+
+# desktop
+gammastep
+foot
+nwg-look
+dunst
+mpv
+lxsession
+fcitx5
+fcitx5-gtk
+fcitx5-gtk+2
+fcitx5-gtk+3
+fcitx5-gtk4
+fcitx5-qt
+fcitx5-qt5
+fcitx5-qt6
+swaybg
+pamixer
+brightnessctl
+cliphist
+wl-clipboard
+wf-recorder
+slurp
+grim
+wlr-randr
+
+# progs
+firefox
+telegram-desktop
+sioyek
+keepassxc
+kdeconnect
+grub-customizer
+git
+
+# utilities
+bash-completion
+curl
+gawk
+wget
+eza
+rsync
+links
+jq
+zstd
+neofetch
+
+# themes
+arc-theme
+papirus-icon-theme
+
+# fonts
+dejavu-fonts-ttf
+
+# audio
+alsa-pipewire
+pipewire
+wireplumber
+wireplumber-elogind
+
+# development
+base-devel
+cmake
+meson
+rustup
+
+# dependencies for swaylock-effects
+libgomp-devel
+pam-devel
+
+# dependencies for eww
+glib-devel
+libdbusmenu-gtk3
+libdbusmenu-gtk3-devel
+gtk-layer-shell
+gtk-layer-shell-devel
+
+# dependencies for river
+zig
+xorg-server-xwayland
+xdg-desktop-portal-wlr
+wlroots-devel
+wlroots
+wayland-protocols
+wayland-devel
+scdoc
+libxkbcommon-devel
+
+# dependencies for libresprite
+SDL2-devel
+SDL2_image-devel
+curlpp-devel
+tinyxml2-devel
+nodejs-devel
+libarchive-devel
+gtest-devel
+giflib-devel

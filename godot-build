@@ -1,0 +1,15 @@
+#!/bin/bash
+
+[ ! -d ~/srcpkgs ] && mkdir ~/srcpkgs
+
+url=`curl -s https://godotengine.org/download/linux/ | grep --color=never "stable_linux.x86_64.zip" | awk 'NR==1{print}' | sed 's/^.*https/https/g'`
+name=`echo $url | sed 's/^.*download\/.*\///g;'`
+file=`echo $name | sed 's/.zip//g'`
+
+wget -q --show-progress $url -P ~/srcpkgs
+
+cd ~/srcpkgs
+
+unzip $name
+
+doas mv $file /usr/local/bin/godot

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+[ ! -d ~/srcpkgs ] && mkdir ~/srcpkgs
+
+url=`curl -s https://apps.ankiweb.net/ | grep --color=never "qt6.tar.zst" | sed 's/^.*href="//g; s/"$//g'`
+name=`echo $url | sed 's/^.*download\/.*\///g'`
+directory=`echo $name | sed 's/.tar.zst//g'`
+
+wget -q --show-progress $url -P ~/srcpkgs
+
+cd ~/srcpkgs
+tar -xvf $name
+
+cd $directory
+chmod +x install.sh
+doas ./install.sh

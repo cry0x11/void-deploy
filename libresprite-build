@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd ~/srcpkgs
+
+git clone --recursive https://github.com/LibreSprite/LibreSprite.git
+
+cd LibreSprite
+mkdir build
+
+cd build
+cmake -G Ninja ..
+ninja libresprite
+
+doas ninja install
