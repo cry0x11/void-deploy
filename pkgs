@@ -18,6 +18,7 @@ keyd
 intel-video-accel
 gvfs
 gvfs-mtp
+hugo
 
 # desktop
 gammastep
